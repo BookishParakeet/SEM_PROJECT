@@ -13,3 +13,4 @@ Photo sharing made easier.
 ##### 9/30/2016 - Text message button and integration added
 ##### 10/5/2016 - Added camera functionality directly to the first view, no more need to click on the take photo button
 ##### 10/12/2016 - Added full camera view and buttons for sharing to display on take
+##### 10/16/2016 - Added App icon
