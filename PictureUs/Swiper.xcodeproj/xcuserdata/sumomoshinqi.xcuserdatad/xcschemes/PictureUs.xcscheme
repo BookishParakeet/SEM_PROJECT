@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CB228FB21D96112F00F7956E"
-               BuildableName = "PictureUs.app"
-               BlueprintName = "PictureUs"
-               ReferencedContainer = "container:PictureUs.xcodeproj">
+               BuildableName = "Swiper.app"
+               BlueprintName = "Swiper"
+               ReferencedContainer = "container:Swiper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CB228FC61D96112F00F7956E"
-               BuildableName = "PictureUsTests.xctest"
-               BlueprintName = "PictureUsTests"
-               ReferencedContainer = "container:PictureUs.xcodeproj">
+               BuildableName = "SwiperTests.xctest"
+               BlueprintName = "SwiperTests"
+               ReferencedContainer = "container:Swiper.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CB228FD11D96112F00F7956E"
-               BuildableName = "PictureUsUITests.xctest"
-               BlueprintName = "PictureUsUITests"
-               ReferencedContainer = "container:PictureUs.xcodeproj">
+               BuildableName = "SwiperUITests.xctest"
+               BlueprintName = "SwiperUITests"
+               ReferencedContainer = "container:Swiper.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB228FB21D96112F00F7956E"
-            BuildableName = "PictureUs.app"
-            BlueprintName = "PictureUs"
-            ReferencedContainer = "container:PictureUs.xcodeproj">
+            BuildableName = "Swiper.app"
+            BlueprintName = "Swiper"
+            ReferencedContainer = "container:Swiper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB228FB21D96112F00F7956E"
-            BuildableName = "PictureUs.app"
-            BlueprintName = "PictureUs"
-            ReferencedContainer = "container:PictureUs.xcodeproj">
+            BuildableName = "Swiper.app"
+            BlueprintName = "Swiper"
+            ReferencedContainer = "container:Swiper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CB228FB21D96112F00F7956E"
-            BuildableName = "PictureUs.app"
-            BlueprintName = "PictureUs"
-            ReferencedContainer = "container:PictureUs.xcodeproj">
+            BuildableName = "Swiper.app"
+            BlueprintName = "Swiper"
+            ReferencedContainer = "container:Swiper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
