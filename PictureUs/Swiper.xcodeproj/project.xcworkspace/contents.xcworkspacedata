@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PictureUs.xcodeproj">
+      location = "self:/Users/sumomoshinqi/GitHub/SEM_PROJECT/PictureUs/Swiper.xcodeproj">
    </FileRef>
 </Workspace>

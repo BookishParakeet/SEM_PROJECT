@@ -14,4 +14,6 @@ Photo sharing made easier.
 ##### 10/5/2016 - Added camera functionality directly to the first view, no more need to click on the take photo button
 ##### 10/7/2016 - Fixed layout issues so that layout has better formatting and spacing
 ##### 10/10/2016 - Added tencent weibo as a sharing possibility, still need to figure what tencent is...
+##### 10/12/2016 - Added full camera view and buttons for sharing to display on take
 ##### 10/15/2016 - Added swipe gestures and connected gestures directly to sharing apig
+##### 10/16/2016 - Added App icon, launch image, updated App name

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AC872061DB4298100125403 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC872051DB4298100125403 /* Launch Screen.storyboard */; };
+		2AC872081DB429E300125403 /* Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC872071DB429E300125403 /* Logo.jpg */; };
 		CB228FB71D96112F00F7956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FB61D96112F00F7956E /* AppDelegate.swift */; };
 		CB228FB91D96112F00F7956E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FB81D96112F00F7956E /* ViewController.swift */; };
 		CB228FBC1D96112F00F7956E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB228FBA1D96112F00F7956E /* Main.storyboard */; };
 		CB228FBE1D96112F00F7956E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB228FBD1D96112F00F7956E /* Assets.xcassets */; };
-		CB228FC11D96112F00F7956E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB228FBF1D96112F00F7956E /* LaunchScreen.storyboard */; };
 		CB228FCC1D96112F00F7956E /* PictureUsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FCB1D96112F00F7956E /* PictureUsTests.swift */; };
-		CB228FD71D96112F00F7956E /* PictureUsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FD61D96112F00F7956E /* PictureUsUITests.swift */; };
+		CB228FD71D96112F00F7956E /* SwiperUsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FD61D96112F00F7956E /* SwiperUsUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,18 +35,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB228FB31D96112F00F7956E /* PictureUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AC872051DB4298100125403 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2AC872071DB429E300125403 /* Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Logo.jpg; sourceTree = "<group>"; };
+		CB228FB31D96112F00F7956E /* Swiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB228FB61D96112F00F7956E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB228FB81D96112F00F7956E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB228FBB1D96112F00F7956E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB228FBD1D96112F00F7956E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB228FC01D96112F00F7956E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB228FC21D96112F00F7956E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB228FC71D96112F00F7956E /* PictureUsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureUsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB228FC71D96112F00F7956E /* SwiperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB228FCB1D96112F00F7956E /* PictureUsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureUsTests.swift; sourceTree = "<group>"; };
 		CB228FCD1D96112F00F7956E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB228FD21D96112F00F7956E /* PictureUsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureUsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB228FD61D96112F00F7956E /* PictureUsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureUsUITests.swift; sourceTree = "<group>"; };
+		CB228FD21D96112F00F7956E /* SwiperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB228FD61D96112F00F7956E /* SwiperUsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiperUsUITests.swift; sourceTree = "<group>"; };
 		CB228FD81D96112F00F7956E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,9 +79,10 @@
 		CB228FAA1D96112F00F7956E = {
 			isa = PBXGroup;
 			children = (
-				CB228FB51D96112F00F7956E /* PictureUs */,
-				CB228FCA1D96112F00F7956E /* PictureUsTests */,
-				CB228FD51D96112F00F7956E /* PictureUsUITests */,
+				2AC872071DB429E300125403 /* Logo.jpg */,
+				CB228FB51D96112F00F7956E /* Swiper */,
+				CB228FCA1D96112F00F7956E /* SwiperUsTests */,
+				CB228FD51D96112F00F7956E /* SwiperUITests */,
 				CB228FB41D96112F00F7956E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,50 +90,53 @@
 		CB228FB41D96112F00F7956E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB228FB31D96112F00F7956E /* PictureUs.app */,
-				CB228FC71D96112F00F7956E /* PictureUsTests.xctest */,
-				CB228FD21D96112F00F7956E /* PictureUsUITests.xctest */,
+				CB228FB31D96112F00F7956E /* Swiper.app */,
+				CB228FC71D96112F00F7956E /* SwiperTests.xctest */,
+				CB228FD21D96112F00F7956E /* SwiperUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB228FB51D96112F00F7956E /* PictureUs */ = {
+		CB228FB51D96112F00F7956E /* Swiper */ = {
 			isa = PBXGroup;
 			children = (
 				CB228FB61D96112F00F7956E /* AppDelegate.swift */,
 				CB228FB81D96112F00F7956E /* ViewController.swift */,
 				CB228FBA1D96112F00F7956E /* Main.storyboard */,
 				CB228FBD1D96112F00F7956E /* Assets.xcassets */,
-				CB228FBF1D96112F00F7956E /* LaunchScreen.storyboard */,
 				CB228FC21D96112F00F7956E /* Info.plist */,
+				2AC872051DB4298100125403 /* Launch Screen.storyboard */,
 			);
+			name = Swiper;
 			path = PictureUs;
 			sourceTree = "<group>";
 		};
-		CB228FCA1D96112F00F7956E /* PictureUsTests */ = {
+		CB228FCA1D96112F00F7956E /* SwiperUsTests */ = {
 			isa = PBXGroup;
 			children = (
 				CB228FCB1D96112F00F7956E /* PictureUsTests.swift */,
 				CB228FCD1D96112F00F7956E /* Info.plist */,
 			);
+			name = SwiperUsTests;
 			path = PictureUsTests;
 			sourceTree = "<group>";
 		};
-		CB228FD51D96112F00F7956E /* PictureUsUITests */ = {
+		CB228FD51D96112F00F7956E /* SwiperUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CB228FD61D96112F00F7956E /* PictureUsUITests.swift */,
+				CB228FD61D96112F00F7956E /* SwiperUsUITests.swift */,
 				CB228FD81D96112F00F7956E /* Info.plist */,
 			);
+			name = SwiperUITests;
 			path = PictureUsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB228FB21D96112F00F7956E /* PictureUs */ = {
+		CB228FB21D96112F00F7956E /* Swiper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB228FDB1D96112F00F7956E /* Build configuration list for PBXNativeTarget "PictureUs" */;
+			buildConfigurationList = CB228FDB1D96112F00F7956E /* Build configuration list for PBXNativeTarget "Swiper" */;
 			buildPhases = (
 				CB228FAF1D96112F00F7956E /* Sources */,
 				CB228FB01D96112F00F7956E /* Frameworks */,
@@ -140,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = PictureUs;
+			name = Swiper;
 			productName = PictureUs;
-			productReference = CB228FB31D96112F00F7956E /* PictureUs.app */;
+			productReference = CB228FB31D96112F00F7956E /* Swiper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB228FC61D96112F00F7956E /* PictureUsTests */ = {
+		CB228FC61D96112F00F7956E /* SwiperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB228FDE1D96112F00F7956E /* Build configuration list for PBXNativeTarget "PictureUsTests" */;
+			buildConfigurationList = CB228FDE1D96112F00F7956E /* Build configuration list for PBXNativeTarget "SwiperTests" */;
 			buildPhases = (
 				CB228FC31D96112F00F7956E /* Sources */,
 				CB228FC41D96112F00F7956E /* Frameworks */,
@@ -158,14 +164,14 @@
 			dependencies = (
 				CB228FC91D96112F00F7956E /* PBXTargetDependency */,
 			);
-			name = PictureUsTests;
+			name = SwiperTests;
 			productName = PictureUsTests;
-			productReference = CB228FC71D96112F00F7956E /* PictureUsTests.xctest */;
+			productReference = CB228FC71D96112F00F7956E /* SwiperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CB228FD11D96112F00F7956E /* PictureUsUITests */ = {
+		CB228FD11D96112F00F7956E /* SwiperUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB228FE11D96112F00F7956E /* Build configuration list for PBXNativeTarget "PictureUsUITests" */;
+			buildConfigurationList = CB228FE11D96112F00F7956E /* Build configuration list for PBXNativeTarget "SwiperUITests" */;
 			buildPhases = (
 				CB228FCE1D96112F00F7956E /* Sources */,
 				CB228FCF1D96112F00F7956E /* Frameworks */,
@@ -176,9 +182,9 @@
 			dependencies = (
 				CB228FD41D96112F00F7956E /* PBXTargetDependency */,
 			);
-			name = PictureUsUITests;
+			name = SwiperUITests;
 			productName = PictureUsUITests;
-			productReference = CB228FD21D96112F00F7956E /* PictureUsUITests.xctest */;
+			productReference = CB228FD21D96112F00F7956E /* SwiperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +198,7 @@
 				TargetAttributes = {
 					CB228FB21D96112F00F7956E = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = WPS3Y6MWD7;
+						DevelopmentTeam = V36F8HDW4N;
 						LastSwiftMigration = 0800;
 					};
 					CB228FC61D96112F00F7956E = {
@@ -207,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CB228FAE1D96112F00F7956E /* Build configuration list for PBXProject "PictureUs" */;
+			buildConfigurationList = CB228FAE1D96112F00F7956E /* Build configuration list for PBXProject "Swiper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -220,9 +226,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB228FB21D96112F00F7956E /* PictureUs */,
-				CB228FC61D96112F00F7956E /* PictureUsTests */,
-				CB228FD11D96112F00F7956E /* PictureUsUITests */,
+				CB228FB21D96112F00F7956E /* Swiper */,
+				CB228FC61D96112F00F7956E /* SwiperTests */,
+				CB228FD11D96112F00F7956E /* SwiperUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,7 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB228FC11D96112F00F7956E /* LaunchScreen.storyboard in Resources */,
+				2AC872081DB429E300125403 /* Logo.jpg in Resources */,
+				2AC872061DB4298100125403 /* Launch Screen.storyboard in Resources */,
 				CB228FBE1D96112F00F7956E /* Assets.xcassets in Resources */,
 				CB228FBC1D96112F00F7956E /* Main.storyboard in Resources */,
 			);
@@ -276,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB228FD71D96112F00F7956E /* PictureUsUITests.swift in Sources */,
+				CB228FD71D96112F00F7956E /* SwiperUsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,12 +292,12 @@
 /* Begin PBXTargetDependency section */
 		CB228FC91D96112F00F7956E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CB228FB21D96112F00F7956E /* PictureUs */;
+			target = CB228FB21D96112F00F7956E /* Swiper */;
 			targetProxy = CB228FC81D96112F00F7956E /* PBXContainerItemProxy */;
 		};
 		CB228FD41D96112F00F7956E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CB228FB21D96112F00F7956E /* PictureUs */;
+			target = CB228FB21D96112F00F7956E /* Swiper */;
 			targetProxy = CB228FD31D96112F00F7956E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -302,14 +309,6 @@
 				CB228FBB1D96112F00F7956E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CB228FBF1D96112F00F7956E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB228FC01D96112F00F7956E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -409,13 +408,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = V36F8HDW4N;
 				INFOPLIST_FILE = PictureUs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Charlie-Wang.PictureUs";
+				PRODUCT_BUNDLE_IDENTIFIER = BookishParakeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -425,13 +426,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = V36F8HDW4N;
 				INFOPLIST_FILE = PictureUs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Charlie-Wang.PictureUs";
+				PRODUCT_BUNDLE_IDENTIFIER = BookishParakeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -444,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Charlie-Wang.PictureUsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureUs.app/PictureUs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiper.app/Swiper";
 			};
 			name = Debug;
 		};
@@ -457,7 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Charlie-Wang.PictureUsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictureUs.app/PictureUs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiper.app/Swiper";
 			};
 			name = Release;
 		};
@@ -490,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB228FAE1D96112F00F7956E /* Build configuration list for PBXProject "PictureUs" */ = {
+		CB228FAE1D96112F00F7956E /* Build configuration list for PBXProject "Swiper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB228FD91D96112F00F7956E /* Debug */,
@@ -499,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB228FDB1D96112F00F7956E /* Build configuration list for PBXNativeTarget "PictureUs" */ = {
+		CB228FDB1D96112F00F7956E /* Build configuration list for PBXNativeTarget "Swiper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB228FDC1D96112F00F7956E /* Debug */,
@@ -508,7 +511,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB228FDE1D96112F00F7956E /* Build configuration list for PBXNativeTarget "PictureUsTests" */ = {
+		CB228FDE1D96112F00F7956E /* Build configuration list for PBXNativeTarget "SwiperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB228FDF1D96112F00F7956E /* Debug */,
@@ -517,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB228FE11D96112F00F7956E /* Build configuration list for PBXNativeTarget "PictureUsUITests" */ = {
+		CB228FE11D96112F00F7956E /* Build configuration list for PBXNativeTarget "SwiperUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB228FE21D96112F00F7956E /* Debug */,
