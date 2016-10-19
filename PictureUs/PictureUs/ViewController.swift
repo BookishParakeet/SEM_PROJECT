@@ -17,6 +17,7 @@ import AVFoundation
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
+    @IBOutlet var SettingGear: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
@@ -36,11 +37,14 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         picker.delegate = self
-         phoneNumber = ""
-         neginPhone = ""
-         tingtingPhone = ""
-        self.view.bringSubview(toFront: imageView)
+        picker.delegate = self
+        phoneNumber = ""
+        neginPhone = ""
+        tingtingPhone = ""
+        buttonStack.isHidden = true
+//        self.view.bringSubview(toFront: imageView)
+        SettingGear.isHidden = true
+        imageView.isHidden = false
         testAction()
     }
     
@@ -260,7 +264,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     
     func didPressTakePhoto(){
-        self.view.bringSubview(toFront: buttonStack)
+//        self.view.bringSubview(toFront: buttonStack)
+        buttonStack.isHidden = false
+        SettingGear.isHidden = false
         if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo){
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
             stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
@@ -292,7 +298,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
             imageView.isHidden = true
             cameraView.isHidden = false
             didTakePhoto = false
-            self.view.sendSubview(toBack: buttonStack)
+            buttonStack.isHidden = true
+            SettingGear.isHidden = true
+//            self.view.sendSubview(toBack: buttonStack)
             
         }
         else{
@@ -310,7 +318,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     // Might need to change this part.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
+        if touches.first != nil {
             if firstTime {
                 didPressTakeAnother()
                 firstTime = false
