@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2AC872061DB4298100125403 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC872051DB4298100125403 /* Launch Screen.storyboard */; };
+		2A21FA961DB81A2800F75717 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 2A21FA951DB81A2800F75717 /* Assets */; };
+		2A21FA981DB81AB200F75717 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A21FA971DB81AB200F75717 /* Launch Screen.storyboard */; };
 		2AC872081DB429E300125403 /* Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC872071DB429E300125403 /* Logo.jpg */; };
 		CB228FB71D96112F00F7956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FB61D96112F00F7956E /* AppDelegate.swift */; };
 		CB228FB91D96112F00F7956E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FB81D96112F00F7956E /* ViewController.swift */; };
@@ -35,7 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2AC872051DB4298100125403 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2A21FA951DB81A2800F75717 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		2A21FA971DB81AB200F75717 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2AC872071DB429E300125403 /* Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Logo.jpg; sourceTree = "<group>"; };
 		CB228FB31D96112F00F7956E /* Swiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB228FB61D96112F00F7956E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +107,8 @@
 				CB228FBA1D96112F00F7956E /* Main.storyboard */,
 				CB228FBD1D96112F00F7956E /* Assets.xcassets */,
 				CB228FC21D96112F00F7956E /* Info.plist */,
-				2AC872051DB4298100125403 /* Launch Screen.storyboard */,
+				2A21FA951DB81A2800F75717 /* Assets */,
+				2A21FA971DB81AB200F75717 /* Launch Screen.storyboard */,
 			);
 			name = Swiper;
 			path = PictureUs;
@@ -238,9 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A21FA961DB81A2800F75717 /* Assets in Resources */,
 				2AC872081DB429E300125403 /* Logo.jpg in Resources */,
-				2AC872061DB4298100125403 /* Launch Screen.storyboard in Resources */,
 				CB228FBE1D96112F00F7956E /* Assets.xcassets in Resources */,
+				2A21FA981DB81AB200F75717 /* Launch Screen.storyboard in Resources */,
 				CB228FBC1D96112F00F7956E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
