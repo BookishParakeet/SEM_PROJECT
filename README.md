@@ -18,3 +18,5 @@ Photo sharing made easier.
 ##### 10/15/2016 - Added swipe gestures and connected gestures directly to sharing apig
 ##### 10/16/2016 - Added App icon, launch image, updated App name
 ##### 10/19/2016 - Added Launch Screen and imported image assets
+##### 10/25/2016 - Added Image overlay to image taken, via subview. Now when images are taken, the overlay is included as well.
+##### 10/25/2016 - Added settings gear and re-enabled take another button.
