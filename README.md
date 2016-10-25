@@ -17,3 +17,4 @@ Photo sharing made easier.
 ##### 10/12/2016 - Added full camera view and buttons for sharing to display on take
 ##### 10/15/2016 - Added swipe gestures and connected gestures directly to sharing apig
 ##### 10/16/2016 - Added App icon, launch image, updated App name
+##### 10/19/2016 - Added Launch Screen and imported image assets

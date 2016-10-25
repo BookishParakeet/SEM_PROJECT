@@ -17,6 +17,7 @@ import AVFoundation
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
+    @IBOutlet var SettingGear: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
@@ -43,6 +44,10 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
          tingtingPhone = ""
         self.view.bringSubview(toFront: imageView)
         assignSwipeAction()
+//        buttonStack.isHidden = true
+//        self.view.bringSubview(toFront: imageView)
+//        SettingGear.isHidden = true
+//        imageView.isHidden = false
     }
     
     func assignSwipeAction() {
@@ -260,6 +265,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     
     func didPressTakePhoto(){
+//        buttonStack.isHidden = false
+//        SettingGear.isHidden = false
         if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo){
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
             stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
@@ -289,13 +296,15 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     //This will take a photo and toggle if we can take another photo
     func didPressTakeAnother(){
         if didTakePhoto == true{
-            
 //            imageView.isHidden = true
 //            cameraView.isHidden = false
             didTakePhoto = false
             self.view.sendSubview(toBack: buttonStack)
             self.view.sendSubview(toBack: imageView)
 
+            buttonStack.isHidden = true
+            SettingGear.isHidden = true
+//            self.view.sendSubview(toBack: buttonStack)
         }
         else{
             captureSession?.startRunning()
@@ -312,7 +321,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     // Might need to change this part.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
+        if touches.first != nil {
             if firstTime {
                 didPressTakeAnother()
                 firstTime = false
