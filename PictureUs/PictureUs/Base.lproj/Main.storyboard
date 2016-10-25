@@ -51,7 +51,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UpArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-pR-E4E">
-                                <frame key="frameInset" minX="160" minY="30" width="50" height="50"/>
+                                <frame key="frameInset" minX="160" minY="30" width="65" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="r7V-iT-cqC">
@@ -99,7 +99,7 @@
         <image name="DownArrow.png" width="42" height="64"/>
         <image name="Left_FB.png" width="54" height="40"/>
         <image name="RightArrow_Social.png" width="58" height="40"/>
-        <image name="UpArrow.png" width="41" height="55"/>
+        <image name="UpArrow.png" width="284" height="308"/>
         <image name="settings.png" width="128" height="128"/>
     </resources>
 </document>
