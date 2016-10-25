@@ -25,8 +25,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     var neginPhone: String!
     var tingtingPhone: String!
     
-    
+    @IBOutlet var logoView: UIView!
     @IBOutlet var cameraView: UIView!
+    
     var captureSession : AVCaptureSession?
     var stillImageOutput : AVCaptureStillImageOutput?
     var previewLayer : AVCaptureVideoPreviewLayer?
@@ -41,42 +42,41 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
          neginPhone = ""
          tingtingPhone = ""
         self.view.bringSubview(toFront: imageView)
-        testAction()
+        assignSwipeAction()
     }
     
-    func testAction() {
-        let upRecognizer = UISwipeGestureRecognizer(target: self, action: "handleUp")
+    func assignSwipeAction() {
+        let upRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleUp))
         upRecognizer.direction = UISwipeGestureRecognizerDirection.up
         self.view?.addGestureRecognizer(upRecognizer)
         
-        let downRecognizer = UISwipeGestureRecognizer(target: self, action: "handleDown")
+        let downRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleDown))
         downRecognizer.direction = UISwipeGestureRecognizerDirection.down
         self.view?.addGestureRecognizer(downRecognizer)
         
-        let leftRecognizer = UISwipeGestureRecognizer(target: self, action: "handleLeft")
+        let leftRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleLeft))
         leftRecognizer.direction = UISwipeGestureRecognizerDirection.left
         self.view?.addGestureRecognizer(leftRecognizer)
         
-        let rightRecognizer = UISwipeGestureRecognizer(target: self, action: "handleRight")
+        let rightRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleRight))
         rightRecognizer.direction = UISwipeGestureRecognizerDirection.right
         self.view?.addGestureRecognizer(rightRecognizer)
-        
-        
     }
+    
     func handleRight() {
-        testFbPush()
+        shareImageWithFacebook()
     }
     
     func handleLeft() {
-        testTwitterPush()
+        shareImageWithTwitter()
     }
     
     func handleDown() {
-        testSendText()
+        sendImageMessage()
     }
     
     func handleUp() {
-        testWeiboPush()
+        shareImageWithWeibo()
     }
 
     
@@ -136,7 +136,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         }
     }
     
-    func testSendText() {
+    func sendImageMessage() {
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
             controller.body = "Message Body"
@@ -148,7 +148,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         }
     }
     
-    func testFbPush() {
+    func shareImageWithFacebook() {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook){
             let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             facebookSheet.setInitialText("Share on Facebook")
@@ -161,7 +161,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         }
     }
     
-    func testTwitterPush() {
+    func shareImageWithTwitter() {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter){
             let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             twitterSheet.setInitialText("Share on Twitter")
@@ -174,7 +174,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         }
     }
     
-    func testWeiboPush() {
+    func shareImageWithWeibo() {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTencentWeibo){
             let weiboSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTencentWeibo)
             weiboSheet.setInitialText("Share on Weibo")
@@ -240,7 +240,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     }
     
     //FB share
-    @IBAction func facebookPush(_ sender: AnyObject) {
+    @IBAction func shareWithFacebook(_ sender: AnyObject) {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook){
             let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             facebookSheet.setInitialText("Share on Facebook")
@@ -260,7 +260,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     
     func didPressTakePhoto(){
-        self.view.bringSubview(toFront: buttonStack)
         if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo){
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
             stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
@@ -276,24 +275,27 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
                     let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
                     
                     self.imageView.image = image
-                    self.imageView.isHidden = false
-                    self.cameraView.isHidden = true
+                    
+//                    self.imageView.isHidden = false
+//                    self.cameraView.isHidden = true
                 }
             })
         }
-        
-        
+        self.view.bringSubview(toFront: imageView)
+        self.view.bringSubview(toFront: buttonStack)
     }
     
     var didTakePhoto = Bool()
     //This will take a photo and toggle if we can take another photo
     func didPressTakeAnother(){
         if didTakePhoto == true{
-            imageView.isHidden = true
-            cameraView.isHidden = false
+            
+//            imageView.isHidden = true
+//            cameraView.isHidden = false
             didTakePhoto = false
             self.view.sendSubview(toBack: buttonStack)
-            
+            self.view.sendSubview(toBack: imageView)
+
         }
         else{
             captureSession?.startRunning()
