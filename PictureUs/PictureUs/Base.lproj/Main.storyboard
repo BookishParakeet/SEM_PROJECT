@@ -27,6 +27,37 @@
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyt-an-Ick"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vM1-0X-MeQ">
+                                <frame key="frameInset" minX="25" minY="50" width="55" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Take Another">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koz-In-iH7"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RightArrow_Social.png" translatesAutoresizingMaskIntoConstraints="NO" id="RWY-JO-8zI">
+                                <frame key="frameInset" minX="290" minY="299" width="75" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Left_FB.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPA-Sv-G70">
+                                <frame key="frameInset" minX="15" minY="299" width="60" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DownArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="HBM-tQ-Tc9">
+                                <frame key="frameInset" minX="160" minY="600" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UpArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="DGd-pR-E4E">
+                                <frame key="frameInset" minX="160" minY="30" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="r7V-iT-cqC">
+                                <frame key="frameInset" minX="300" minY="50" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBc-ce-raw">
                                 <frame key="frameInset" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,23 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="sm6-oJ-tf3">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vM1-0X-MeQ">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Take Another">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="twitterPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koz-In-iH7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="ud2-Qt-gPS" userLabel="Setting">
-                                <frame key="frameInset" minX="295" minY="28" width="57" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="sm6-oJ-tf3"/>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,11 +78,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="SettingGear" destination="ud2-Qt-gPS" id="KVA-IM-cLy"/>
                         <outlet property="buttonStack" destination="sm6-oJ-tf3" id="Nz3-pM-FCE"/>
                         <outlet property="cameraView" destination="qF5-7n-W2w" id="kdx-SE-CQr"/>
+                        <outlet property="downArrow" destination="HBM-tQ-Tc9" id="LXG-BO-iQS"/>
                         <outlet property="imageView" destination="cBc-ce-raw" id="BnZ-sL-GCK"/>
+                        <outlet property="leftArrow" destination="iPA-Sv-G70" id="nmV-LX-apU"/>
                         <outlet property="logoView" destination="qF5-7n-W2w" id="zyN-EZ-pZX"/>
+                        <outlet property="rightArrow" destination="RWY-JO-8zI" id="lVO-IG-IDk"/>
+                        <outlet property="settingsGear" destination="r7V-iT-cqC" id="Py8-0g-Tjt"/>
+                        <outlet property="takeAnotherButton" destination="vM1-0X-MeQ" id="ds5-uk-btA"/>
+                        <outlet property="upArrow" destination="DGd-pR-E4E" id="BHY-wT-VLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,6 +96,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DownArrow.png" width="42" height="64"/>
+        <image name="Left_FB.png" width="54" height="40"/>
+        <image name="RightArrow_Social.png" width="58" height="40"/>
+        <image name="UpArrow.png" width="41" height="55"/>
         <image name="settings.png" width="128" height="128"/>
     </resources>
 </document>

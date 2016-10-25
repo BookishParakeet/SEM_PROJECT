@@ -16,10 +16,15 @@ import AVFoundation
 
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var leftArrow: UIImageView!
+    @IBOutlet var rightArrow: UIImageView!
+    @IBOutlet var downArrow: UIImageView!
+    @IBOutlet var upArrow: UIImageView!
+    @IBOutlet var settingsGear: UIImageView!
     
-    @IBOutlet var SettingGear: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var imageView: UIImageView!
+    
     var imagePicker: UIImagePickerController!
     let picker = UIImagePickerController()
     var phoneNumber: String!
@@ -28,6 +33,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     @IBOutlet var logoView: UIView!
     @IBOutlet var cameraView: UIView!
+    @IBOutlet var takeAnotherButton: UIButton!
     
     var captureSession : AVCaptureSession?
     var stillImageOutput : AVCaptureStillImageOutput?
@@ -42,12 +48,44 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
          phoneNumber = ""
          neginPhone = ""
          tingtingPhone = ""
-        self.view.bringSubview(toFront: imageView)
+//        self.view.bringSubview(toFront: imageView)
         assignSwipeAction()
 //        buttonStack.isHidden = true
 //        self.view.bringSubview(toFront: imageView)
-//        SettingGear.isHidden = true
 //        imageView.isHidden = false
+        
+        imageView.addSubview(leftArrow)
+        imageView.addSubview(rightArrow)
+        imageView.addSubview(downArrow)
+        imageView.addSubview(upArrow)
+        imageView.addSubview(settingsGear)
+        
+//                self.view.bringSubview(toFront: takeAnotherButton)
+        
+//        let myImages = ["Logo.jpg"]
+//        let imageWidth:CGFloat = 275
+//        let imageHeight:CGFloat = 147
+//        var yPosition:CGFloat = 0
+//        var scrollViewContentSize:CGFloat=0;
+//        
+//        for index in 0 ..< myImages.count
+//        {
+//            let myImage:UIImage = UIImage(named: myImages[index])!
+//            let myImageView:UIImageView = UIImageView()
+//            myImageView.image = myImage
+//            myImageView.contentMode = UIViewContentMode.scaleAspectFit
+//            myImageView.frame.size.width = imageWidth
+//            myImageView.frame.size.height = imageHeight
+//            myImageView.center = self.view.center
+//            myImageView.frame.origin.y = yPosition
+//            let spacer:CGFloat = 20
+//            yPosition+=imageHeight + spacer
+//            scrollViewContentSize+=imageHeight + spacer
+//            imageView.sizeThatFits(CGSize(width: imageWidth, height: scrollViewContentSize))
+//        }
+//        
+
+        
     }
     
     func assignSwipeAction() {
@@ -69,11 +107,11 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     }
     
     func handleRight() {
-        shareImageWithFacebook()
+        shareImageWithTwitter()
     }
     
     func handleLeft() {
-        shareImageWithTwitter()
+        shareImageWithFacebook()
     }
     
     func handleDown() {
@@ -266,7 +304,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     func didPressTakePhoto(){
 //        buttonStack.isHidden = false
-//        SettingGear.isHidden = false
         if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo){
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
             stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
@@ -289,7 +326,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
             })
         }
         self.view.bringSubview(toFront: imageView)
-        self.view.bringSubview(toFront: buttonStack)
+        self.view.bringSubview(toFront: takeAnotherButton)
+//        self.view.bringSubview(toFront: buttonStack)
     }
     
     var didTakePhoto = Bool()
@@ -299,11 +337,10 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
 //            imageView.isHidden = true
 //            cameraView.isHidden = false
             didTakePhoto = false
-            self.view.sendSubview(toBack: buttonStack)
+//            self.view.sendSubview(toBack: buttonStack)
             self.view.sendSubview(toBack: imageView)
 
             buttonStack.isHidden = true
-            SettingGear.isHidden = true
 //            self.view.sendSubview(toBack: buttonStack)
         }
         else{
