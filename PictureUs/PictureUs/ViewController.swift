@@ -39,20 +39,16 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     var stillImageOutput : AVCaptureStillImageOutput?
     var previewLayer : AVCaptureVideoPreviewLayer?
     
-    @IBOutlet var buttonStack: UIStackView!
     var firstTime: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         picker.delegate = self
-         phoneNumber = ""
-         neginPhone = ""
-         tingtingPhone = ""
-//        self.view.bringSubview(toFront: imageView)
+        picker.delegate = self
+        phoneNumber = ""
+        neginPhone = ""
+        tingtingPhone = ""
+        
         assignSwipeAction()
-//        buttonStack.isHidden = true
-//        self.view.bringSubview(toFront: imageView)
-//        imageView.isHidden = false
         
         imageView.addSubview(leftArrow)
         imageView.addSubview(rightArrow)
@@ -60,31 +56,31 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         imageView.addSubview(upArrow)
         imageView.addSubview(settingsGear)
         
-//                self.view.bringSubview(toFront: takeAnotherButton)
+        //                self.view.bringSubview(toFront: takeAnotherButton)
         
-//        let myImages = ["Logo.jpg"]
-//        let imageWidth:CGFloat = 275
-//        let imageHeight:CGFloat = 147
-//        var yPosition:CGFloat = 0
-//        var scrollViewContentSize:CGFloat=0;
-//        
-//        for index in 0 ..< myImages.count
-//        {
-//            let myImage:UIImage = UIImage(named: myImages[index])!
-//            let myImageView:UIImageView = UIImageView()
-//            myImageView.image = myImage
-//            myImageView.contentMode = UIViewContentMode.scaleAspectFit
-//            myImageView.frame.size.width = imageWidth
-//            myImageView.frame.size.height = imageHeight
-//            myImageView.center = self.view.center
-//            myImageView.frame.origin.y = yPosition
-//            let spacer:CGFloat = 20
-//            yPosition+=imageHeight + spacer
-//            scrollViewContentSize+=imageHeight + spacer
-//            imageView.sizeThatFits(CGSize(width: imageWidth, height: scrollViewContentSize))
-//        }
-//        
-
+        //        let myImages = ["Logo.jpg"]
+        //        let imageWidth:CGFloat = 275
+        //        let imageHeight:CGFloat = 147
+        //        var yPosition:CGFloat = 0
+        //        var scrollViewContentSize:CGFloat=0;
+        //
+        //        for index in 0 ..< myImages.count
+        //        {
+        //            let myImage:UIImage = UIImage(named: myImages[index])!
+        //            let myImageView:UIImageView = UIImageView()
+        //            myImageView.image = myImage
+        //            myImageView.contentMode = UIViewContentMode.scaleAspectFit
+        //            myImageView.frame.size.width = imageWidth
+        //            myImageView.frame.size.height = imageHeight
+        //            myImageView.center = self.view.center
+        //            myImageView.frame.origin.y = yPosition
+        //            let spacer:CGFloat = 20
+        //            yPosition+=imageHeight + spacer
+        //            scrollViewContentSize+=imageHeight + spacer
+        //            imageView.sizeThatFits(CGSize(width: imageWidth, height: scrollViewContentSize))
+        //        }
+        //
+        
         
     }
     
@@ -121,8 +117,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     func handleUp() {
         shareImageWithWeibo()
     }
-
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -182,9 +176,12 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     func sendImageMessage() {
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
-            controller.body = "Message Body"
+//            controller.body = "Message Body"
+            controller.body = "Hey! Check this out!"
             controller.addAttachmentData(UIImageJPEGRepresentation(imageView.image!, 1)!, typeIdentifier: "image/jpg", filename: "images.jpg")
-            controller.recipients = [phoneNumber, tingtingPhone, neginPhone]
+//            controller.recipients = [phoneNumber, tingtingPhone, neginPhone]
+            phoneNumber = "+1 (650) 810-6812"
+            controller.recipients = [phoneNumber]
             controller.messageComposeDelegate = self
             
             self.present(controller, animated: true, completion: nil)
@@ -260,7 +257,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
         imageView.contentMode = .scaleAspectFit //3
         imageView.image = chosenImage //4
-
+        
         dismiss(animated:true, completion: nil) //5
     }
     
@@ -270,16 +267,16 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         didPressTakeAnother()
         firstTime = true
         print("clickd on send")
-//        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter){
-//            let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-//            twitterSheet.setInitialText("Share on Twitter")
-//            twitterSheet.add(imageView.image)
-//            self.present(twitterSheet, animated: true, completion: nil)
-//        } else {
-//            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
+        //        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter){
+        //            let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        //            twitterSheet.setInitialText("Share on Twitter")
+        //            twitterSheet.add(imageView.image)
+        //            self.present(twitterSheet, animated: true, completion: nil)
+        //        } else {
+        //            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.alert)
+        //            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        //            self.present(alert, animated: true, completion: nil)
+        //        }
     }
     
     //FB share
@@ -295,7 +292,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -303,7 +300,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     
     
     func didPressTakePhoto(){
-//        buttonStack.isHidden = false
         if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo){
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
             stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
@@ -315,33 +311,24 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     let dataProvider  = CGDataProvider(data: imageData as! CFData)
                     let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent )
-//                    kCGRenderingIntentDefault
+                    //                    kCGRenderingIntentDefault
                     let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
                     
                     self.imageView.image = image
-                    
-//                    self.imageView.isHidden = false
-//                    self.cameraView.isHidden = true
                 }
             })
         }
         self.view.bringSubview(toFront: imageView)
         self.view.bringSubview(toFront: takeAnotherButton)
-//        self.view.bringSubview(toFront: buttonStack)
     }
     
     var didTakePhoto = Bool()
     //This will take a photo and toggle if we can take another photo
     func didPressTakeAnother(){
         if didTakePhoto == true{
-//            imageView.isHidden = true
-//            cameraView.isHidden = false
             didTakePhoto = false
-//            self.view.sendSubview(toBack: buttonStack)
             self.view.sendSubview(toBack: imageView)
-
-            buttonStack.isHidden = true
-//            self.view.sendSubview(toBack: buttonStack)
+            self.view.sendSubview(toBack: takeAnotherButton)
         }
         else{
             captureSession?.startRunning()
@@ -351,10 +338,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         }
         
     }
-    
-//    @IBAction func TogglePhoto(_ sender: AnyObject) {
-//            didPressTakeAnother()
-//    }
     
     // Might need to change this part.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -367,8 +350,5 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         }
         super.touchesBegan(touches, with: event)
     }
-
-    
     
 }
-
