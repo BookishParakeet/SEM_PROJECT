@@ -1,4 +1,4 @@
-# picture_us
+# swiper
 
 ## About
 This is an iOS app that will simply social sharing photos with just a simple swipe.
@@ -20,3 +20,10 @@ Photo sharing made easier.
 ##### 10/19/2016 - Added Launch Screen and imported image assets
 ##### 10/25/2016 - Added Image overlay to image taken, via subview. Now when images are taken, the overlay is included as well.
 ##### 10/25/2016 - Added settings gear and re-enabled take another button.
+##### 10/25/2016 - Added settings page and app can now transition between first view with second view.
+##### 10/25/2016 - Now we can drag icons from selection of media types and into the selection process.
+##### 10/29/2016 - Integrated with AWS mobile hub signin.
+##### 10/30/2016 - App now allows for sign in.
+##### 10/31/2016 - App now allows for log out.
+##### 11/1/2016 - Added App sign in view controller background.
+##### 11/1/2016 - Added Facebook button and cleaned up code.
