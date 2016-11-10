@@ -35,8 +35,11 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     let picker = UIImagePickerController()
     var phoneNumber: String!
     
+    
     @IBOutlet var cameraView: UIView!
     @IBOutlet var takeAnotherButton: UIButton!
+    
+    @IBOutlet var userSettingsButton: UIButton!
     
     var captureSession : AVCaptureSession?
     var stillImageOutput : AVCaptureStillImageOutput?
@@ -45,6 +48,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
     var firstTime: Bool = true
     var signInObserver: AnyObject!
     var signOutObserver: AnyObject!
+    
+    var demoFeature: DemoFeature!
     
     override func viewDidLoad() {
         presentSignInViewController()
@@ -69,6 +74,19 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
             guard let strongSelf = self else { return }
             print("Sign Out Observer observed sign out.")
             })
+        
+        
+        
+        
+        
+        demoFeature = DemoFeature.init(
+            name: NSLocalizedString("User Sign-in",
+                                    comment: "Label for demo menu option."),
+            detail: NSLocalizedString("Enable user login with popular 3rd party providers.",
+                                      comment: "Description for demo menu option."),
+            icon: "UserIdentityIcon", storyboard: "UserSettings")
+        
+        
     }
     
     deinit {
@@ -197,10 +215,13 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         } else {
             let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+             self.present(alert, animated: true, completion: nil)
         }
     }
     
+    /**
+    sharing image with weibo
+ **/
     func shareImageWithWeibo() {
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTencentWeibo){
             let weiboSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTencentWeibo)
@@ -281,6 +302,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         self.view.bringSubview(toFront: imageView)
         self.view.bringSubview(toFront: settingPageButton)
         self.view.bringSubview(toFront: takeAnotherButton)
+        
+            self.view.bringSubview(toFront: userSettingsButton)
 
     }
     
@@ -292,6 +315,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
             self.view.sendSubview(toBack: imageView)
             self.view.sendSubview(toBack: takeAnotherButton)
             self.view.sendSubview(toBack: settingPageButton)
+            self.view.sendSubview(toBack: userSettingsButton)
         }
         else{
             captureSession?.startRunning()
@@ -312,5 +336,15 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, 
         }
         super.touchesBegan(touches, with: event)
     }
+    
+    @IBAction func sendToUserSettings(_ sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "UserSettings", bundle: nil)
+        let userSettingsViewController = storyboard.instantiateViewController(withIdentifier: "UserSettings") as! UserSettingsViewController
+        present(userSettingsViewController, animated: true, completion: nil)
+     //   let viewController = storyboard?.instantiateViewController(withIdentifier: demoFeature.storyboard)
+       //   self.navigationController!.pushViewController(viewController!, animated: true)
+    }
+    
+    
 }
 
