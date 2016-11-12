@@ -13,6 +13,8 @@
 		CB1336C51DD42D85004B7B9F /* UserSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1336C41DD42D85004B7B9F /* UserSettings.storyboard */; };
 		CB1336CA1DD44758004B7B9F /* DemoFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1336C91DD44758004B7B9F /* DemoFeature.swift */; };
 		CB1336CD1DD449FB004B7B9F /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1336CC1DD449FB004B7B9F /* UserSettingsViewController.swift */; };
+		CB1336D01DD69211004B7B9F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1336CE1DD69211004B7B9F /* FBSDKCoreKit.framework */; };
+		CB1336D11DD69211004B7B9F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1336CF1DD69211004B7B9F /* FBSDKLoginKit.framework */; };
 		CB228FB71D96112F00F7956E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FB61D96112F00F7956E /* AppDelegate.swift */; };
 		CB228FB91D96112F00F7956E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB228FB81D96112F00F7956E /* ViewController.swift */; };
 		CB228FBC1D96112F00F7956E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB228FBA1D96112F00F7956E /* Main.storyboard */; };
@@ -116,6 +118,8 @@
 		CB1336C41DD42D85004B7B9F /* UserSettings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserSettings.storyboard; sourceTree = "<group>"; };
 		CB1336C91DD44758004B7B9F /* DemoFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoFeature.swift; sourceTree = "<group>"; };
 		CB1336CC1DD449FB004B7B9F /* UserSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		CB1336CE1DD69211004B7B9F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Sdk/Facebook/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		CB1336CF1DD69211004B7B9F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Sdk/Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CB228FB31D96112F00F7956E /* Swiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB228FB61D96112F00F7956E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB228FB81D96112F00F7956E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1336D01DD69211004B7B9F /* FBSDKCoreKit.framework in Frameworks */,
+				CB1336D11DD69211004B7B9F /* FBSDKLoginKit.framework in Frameworks */,
 				CB2992931DC41CE000C1530B /* GoogleNetworkingUtilities.framework in Frameworks */,
 				CB2992941DC41CE000C1530B /* GoogleSignIn.framework in Frameworks */,
 				CB2992951DC41CE000C1530B /* GoogleSymbolUtilities.framework in Frameworks */,
@@ -370,6 +376,8 @@
 		CB29927A1DC40D7800C1530B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB1336CE1DD69211004B7B9F /* FBSDKCoreKit.framework */,
+				CB1336CF1DD69211004B7B9F /* FBSDKLoginKit.framework */,
 				CB29928D1DC41CE000C1530B /* GoogleNetworkingUtilities.framework */,
 				CB29928E1DC41CE000C1530B /* GoogleSignIn.framework */,
 				CB29928F1DC41CE000C1530B /* GoogleSymbolUtilities.framework */,
@@ -739,6 +747,7 @@
 					"$(PROJECT_DIR)/Sdk/Aws",
 					"$(PROJECT_DIR)/AmazonAws",
 					"$(PROJECT_DIR)/Sdk/Google",
+					"$(PROJECT_DIR)/Sdk/Facebook",
 				);
 				INFOPLIST_FILE = PictureUs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -748,6 +757,10 @@
 					"$(PROJECT_DIR)/Sdk/Google/GoogleSignIn.framework/GoogleSignIn",
 					"-force_load",
 					"$(PROJECT_DIR)/Sdk/Google/GoogleUtilities.framework/GoogleUtilities",
+					"-force_load",
+					"$(PROJECT_DIR)/Sdk/Facebook/FBSDKCoreKit.framework/FBSDKCoreKit",
+					"-force_load",
+					"$(PROJECT_DIR)/Sdk/Facebook/FBSDKLoginKit.framework/FBSDKLoginKit",
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Charlie-Wang.PictureUs";
@@ -770,6 +783,7 @@
 					"$(PROJECT_DIR)/Sdk/Aws",
 					"$(PROJECT_DIR)/AmazonAws",
 					"$(PROJECT_DIR)/Sdk/Google",
+					"$(PROJECT_DIR)/Sdk/Facebook",
 				);
 				INFOPLIST_FILE = PictureUs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -779,6 +793,10 @@
 					"$(PROJECT_DIR)/Sdk/Google/GoogleSignIn.framework/GoogleSignIn",
 					"-force_load",
 					"$(PROJECT_DIR)/Sdk/Google/GoogleUtilities.framework/GoogleUtilities",
+					"-force_load",
+					"$(PROJECT_DIR)/Sdk/Facebook/FBSDKCoreKit.framework/FBSDKCoreKit",
+					"-force_load",
+					"$(PROJECT_DIR)/Sdk/Facebook/FBSDKLoginKit.framework/FBSDKLoginKit",
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Charlie-Wang.PictureUs";
